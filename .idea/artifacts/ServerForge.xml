@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ServerForge">
+    <output-path>$USER_HOME$/.minecraft/mods</output-path>
+    <root id="archive" name="ServerForge.jar">
+      <element id="module-output" name="ServerForge" />
+    </root>
+  </artifact>
+</component>

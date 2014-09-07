@@ -1,0 +1,3 @@
+./gradlew build
+rm ~/.minecraft/mods/ServerForge.jar
+mv ./build/libs/modid-1.0.jar ~/.minecraft/mods/ServerForge.jar
