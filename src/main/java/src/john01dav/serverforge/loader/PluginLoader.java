@@ -31,10 +31,14 @@ public class PluginLoader{
         ServerForge.info("Loading plugins...");
         for(File file : pluginsFolder.listFiles()){
             ServerForge.info("Loading " + file.getAbsolutePath());
-            PluginFile pFile = new PluginFile(file);
-            pluginFile.add(pFile);
-            pluginURL.add(pFile.getURL());
-            ServerForge.info("Loaded " + pFile.getName());
+            if(file.getName().endsWith(".jar") || (!file.isDirectory())){
+                PluginFile pFile = new PluginFile(file);
+                pluginFile.add(pFile);
+                pluginURL.add(pFile.getURL());
+                ServerForge.info("Loaded " + pFile.getName());
+            }else{
+                ServerForge.info("Skipping " + file.getAbsolutePath() + " not a plugin.");
+            }
         }
         ServerForge.info("Plugins loaded");
 
@@ -89,6 +93,10 @@ public class PluginLoader{
      */
     public ArrayList<PluginWrapper> getPlugins(){
         return pluginWrapper;
+    }
+
+    public File getPluginsFolder(){
+        return pluginsFolder;
     }
 
 }
