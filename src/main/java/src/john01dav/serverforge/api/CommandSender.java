@@ -4,7 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
 
 public class CommandSender {
-    private ICommandSender forgeSender;
+    protected ICommandSender forgeSender;
 
     public CommandSender(ICommandSender forgeSender){
         this.forgeSender = forgeSender;
