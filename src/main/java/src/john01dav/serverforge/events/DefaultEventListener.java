@@ -3,11 +3,10 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.event.CommandEvent;
 import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import src.john01dav.serverforge.ServerForge;
 import src.john01dav.serverforge.api.Player;
-import src.john01dav.serverforge.api.events.ChatEvent;
-import src.john01dav.serverforge.api.events.CommandSendEvent;
-import src.john01dav.serverforge.api.events.JoinWorldEvent;
+import src.john01dav.serverforge.api.events.*;
 
 public class DefaultEventListener{
     private EventManager eventManager;
@@ -43,6 +42,13 @@ public class DefaultEventListener{
     public void entityJoinWorldEvent(EntityJoinWorldEvent e){
         JoinWorldEvent joinWorldEvent = new JoinWorldEvent(e);
         eventManager.fireEvent(joinWorldEvent);
+    }
+
+    @SubscribeEvent
+    public void playerInteractEvent(PlayerInteractEvent e){
+        InteractEvent event = new InteractEvent(e);
+        eventManager.fireEvent(event);
+        e.setCanceled(event.getCancelled());
     }
 
 }
