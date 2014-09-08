@@ -40,6 +40,16 @@ public class Player{
     }
 
     /**
+     * Sets the yaw and pitch of the player's camera
+     * @param yaw The yaw to set for this player
+     * @param pitch The pitch to set for this player
+     */
+    public void setCameraAngles(float yaw, float pitch){
+        EntityPlayerMP mpPlayer = ((EntityPlayerMP) entityPlayer);
+        mpPlayer.playerNetServerHandler.setPlayerLocation(mpPlayer.posX, mpPlayer.posY, mpPlayer.posZ, yaw, pitch);
+    }
+
+    /**
      * Sends the message passed into this method to the player's chat box
      * @param message The message to send to the player
      */
