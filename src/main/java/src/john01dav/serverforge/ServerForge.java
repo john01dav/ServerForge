@@ -51,9 +51,20 @@ public class ServerForge{
      * Registers a command for use in the server, can only be called from onServerStart() or it's submethods
      * @param name The name of the command to add, to be used as the name to execute (ie. name = "example", to type in chat = "/example")
      * @param command The command object to register
+     * @param aliases Array containing the aliases for this command
+     */
+    public void registerCommand(String name, ServerForgeCommand command, String[] aliases){
+        CommandWrapper wrapper = new CommandWrapper(name, command, aliases);
+        serverStartingEvent.registerServerCommand(wrapper);
+    }
+
+    /**
+     * Registers a command for use in the server, can only be called from onServerStart() or it's submethods
+     * @param name The name of the command to add, to be used as the name to execute (ie. name = "example", to type in chat = "/example")
+     * @param command The command object to register
      */
     public void registerCommand(String name, ServerForgeCommand command){
-        CommandWrapper wrapper = new CommandWrapper(name, command);
+        CommandWrapper wrapper = new CommandWrapper(name, command, new String[0]);
         serverStartingEvent.registerServerCommand(wrapper);
     }
 

@@ -8,10 +8,16 @@ import java.util.List;
 public class CommandWrapper implements ICommand{
     private String name;
     private ServerForgeCommand command;
+    private ArrayList<String> aliases;
 
-    public CommandWrapper(String name, ServerForgeCommand command){
+    public CommandWrapper(String name, ServerForgeCommand command, String[] ailaises){
         this.name = name;
         this.command = command;
+
+        this.aliases = new ArrayList<String>();
+        for(String s : aliases){
+            this.aliases.add(s);
+        }
     }
 
     @Override
@@ -26,7 +32,7 @@ public class CommandWrapper implements ICommand{
 
     @Override
     public List getCommandAliases(){
-        return new ArrayList<String>();
+        return aliases;
     }
 
     @Override
