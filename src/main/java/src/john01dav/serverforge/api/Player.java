@@ -2,13 +2,27 @@ package src.john01dav.serverforge.api;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.ChatComponentText;
+
+import java.util.HashMap;
 import java.util.UUID;
 
 public class Player{
+    private static HashMap<UUID, Player> playerEntities = new HashMap<UUID, Player>();
     private EntityPlayer entityPlayer;
 
-    public Player(EntityPlayer entityPlayer){
+    private Player(EntityPlayer entityPlayer){
         this.entityPlayer = entityPlayer;
+    }
+
+    public static Player get(EntityPlayer player){
+        Player c = playerEntities.get(player.getUniqueID());
+        if(c == null){
+            Player np = new Player(player);
+            playerEntities.put(player.getUniqueID(), np);
+            return np;
+        }else{
+            return c;
+        }
     }
 
     /**

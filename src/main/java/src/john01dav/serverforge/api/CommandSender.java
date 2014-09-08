@@ -33,7 +33,7 @@ public class CommandSender {
     public Player getPlayer(){
         if(forgeSender instanceof EntityPlayer){
             EntityPlayer entity = ((EntityPlayer) forgeSender);
-            return new Player(entity);
+            return Player.get(entity);
         }else{
             return null;
         }

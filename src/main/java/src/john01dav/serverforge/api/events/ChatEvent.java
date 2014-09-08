@@ -13,7 +13,7 @@ public class ChatEvent implements CancellableEvent{
     public ChatEvent(ServerChatEvent serverChatEvent){
         this.serverChatEvent = serverChatEvent;
         message = serverChatEvent.message;
-        player = new Player(serverChatEvent.player);
+        player = Player.get(serverChatEvent.player);
     }
 
     /**

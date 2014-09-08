@@ -17,7 +17,7 @@ public class EntityBase{
     public Player getPlayer(){
         if(entity instanceof EntityPlayer){
             EntityPlayer player = ((EntityPlayer) entity);
-            return new Player(player);
+            return Player.get(player);
         }else{
             return null;
         }

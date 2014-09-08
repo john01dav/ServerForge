@@ -102,7 +102,7 @@ public class ServerForge{
         for(World world : MinecraftServer.getServer().worldServers){
             for(Object o : world.playerEntities){
                 EntityPlayerMP playerMP = ((EntityPlayerMP) o);
-                Player player = new Player(playerMP);
+                Player player = Player.get(playerMP);
                 list.add(player);
             }
         }
