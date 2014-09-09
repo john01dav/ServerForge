@@ -3,6 +3,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.event.CommandEvent;
 import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import src.john01dav.serverforge.ServerForge;
 import src.john01dav.serverforge.api.Player;
@@ -49,6 +50,13 @@ public class DefaultEventListener{
         InteractEvent event = new InteractEvent(e);
         eventManager.fireEvent(event);
         e.setCanceled(event.getCancelled());
+    }
+
+    @SubscribeEvent
+    public void playerDropEvent(PlayerDropsEvent e){
+        PlayerDeathEvent playerDeathEvent = new PlayerDeathEvent(e);
+        eventManager.fireEvent(playerDeathEvent);
+        e.setCanceled(playerDeathEvent.getCancelled());
     }
 
 }
