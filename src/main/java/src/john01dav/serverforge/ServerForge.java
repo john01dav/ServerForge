@@ -9,6 +9,7 @@ import src.john01dav.serverforge.api.Player;
 import src.john01dav.serverforge.api.ServerForgeCommand;
 import src.john01dav.serverforge.events.EventManager;
 import src.john01dav.serverforge.loader.PluginLoader;
+import src.john01dav.serverforge.permissions.PermissionsManager;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,7 @@ public class ServerForge{
     public static final String VERSION = "PRE-ALPHA 0.0.1";
 
     private EventManager eventManager;
+    private PermissionsManager permissionsManager;
     private PluginLoader pluginLoader;
 
     private FMLServerStartingEvent serverStartingEvent;
@@ -39,6 +41,9 @@ public class ServerForge{
 
         eventManager = new EventManager();
         eventManager.onServerStart();
+
+        permissionsManager = new PermissionsManager();
+        permissionsManager.onServerStart();
 
         pluginLoader = new PluginLoader();
         pluginLoader.onServerStart();
@@ -82,6 +87,14 @@ public class ServerForge{
      */
     public EventManager getEventManager(){
         return eventManager;
+    }
+
+    /**
+     * Returns the permissions manager (the class responsible for the setting and getting of player's permissions)
+     * @return the permissions manager
+     */
+    public PermissionsManager getPermissionsManager(){
+        return permissionsManager;
     }
 
     /**
