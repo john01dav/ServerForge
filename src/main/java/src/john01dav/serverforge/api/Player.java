@@ -2,6 +2,7 @@ package src.john01dav.serverforge.api;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.ChatComponentText;
+import src.john01dav.serverforge.ServerForge;
 
 import java.util.HashMap;
 import java.util.UUID;
@@ -69,6 +70,15 @@ public class Player{
      */
     public void sendMessage(String message){
         entityPlayer.addChatMessage(new ChatComponentText(message));
+    }
+
+    /**
+     * Returns the value for the permission of this player
+     * @param permission the permission to lookup
+     * @return the value of the permission
+     */
+    public boolean getPermission(String permission){
+        return ServerForge.instance.getPermissionsManager().getPermission(((EntityPlayerMP) entityPlayer), permission);
     }
 
 }
