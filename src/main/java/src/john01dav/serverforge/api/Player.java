@@ -10,9 +10,11 @@ import java.util.UUID;
 public class Player{
     private static HashMap<UUID, Player> playerEntities = new HashMap<UUID, Player>();
     private EntityPlayer entityPlayer;
+    private InventoryBase inventory;
 
     private Player(EntityPlayer entityPlayer){
         this.entityPlayer = entityPlayer;
+        inventory = new InventoryBase(this.entityPlayer.inventory);
     }
 
     public static Player get(EntityPlayer player){
@@ -79,6 +81,10 @@ public class Player{
      */
     public boolean getPermission(String permission){
         return ServerForge.instance.getPermissionsManager().getPermission(((EntityPlayerMP) entityPlayer), permission);
+    }
+
+    public InventoryBase getInventory(){
+        return inventory;
     }
 
 }
