@@ -69,8 +69,7 @@ public class ServerForge{
      * @param command The command object to register
      */
     public void registerCommand(String name, ServerForgeCommand command){
-        CommandWrapper wrapper = new CommandWrapper(name, command, new String[0]);
-        serverStartingEvent.registerServerCommand(wrapper);
+        registerCommand(name, command, new String[0]);
     }
 
     /**
