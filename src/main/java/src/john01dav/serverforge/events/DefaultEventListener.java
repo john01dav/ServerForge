@@ -5,6 +5,7 @@ import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.world.BlockEvent;
 import src.john01dav.serverforge.ServerForge;
 import src.john01dav.serverforge.api.Player;
 import src.john01dav.serverforge.api.events.*;
@@ -26,7 +27,7 @@ public class DefaultEventListener{
         e.setCanceled(true);
 
         if(!event.getCancelled()){
-            for (Player player : ServerForge.instance.getOnlinePlayers()) {
+            for (Player player : ServerForge.instance.getOnlinePlayers()){
                 player.sendMessage(event.getChatFormat());
             }
         }
@@ -57,6 +58,13 @@ public class DefaultEventListener{
         PlayerDeathEvent playerDeathEvent = new PlayerDeathEvent(e);
         eventManager.fireEvent(playerDeathEvent);
         e.setCanceled(playerDeathEvent.getCancelled());
+    }
+
+    @SubscribeEvent
+    public void breakEvent(BlockEvent.BreakEvent e){
+        BlockBreakEvent event = new BlockBreakEvent(e);
+        eventManager.fireEvent(event);
+        e.setCanceled(event.getCancelled());
     }
 
 }
