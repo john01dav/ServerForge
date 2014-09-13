@@ -1,0 +1,3 @@
+./gradlew build
+rm ~/.minecraft/mods/ServerForge.jar
+mv ./build/libs/ServerForge-PRE-ALPHA.jar ~/.minecraft/mods/ServerForge.jar

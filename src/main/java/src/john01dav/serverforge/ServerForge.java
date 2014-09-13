@@ -13,7 +13,7 @@ import src.john01dav.serverforge.permissions.PermissionsManager;
 
 import java.util.ArrayList;
 
-@Mod(modid = "ServerForge", name = "ServerForge", version = ServerForge.VERSION)
+@Mod(modid = "ServerForge", name = "ServerForge", version = ServerForge.VERSION, acceptableRemoteVersions = "*")
 public class ServerForge{
     public static final String VERSION = "PRE-ALPHA 0.0.1";
 
