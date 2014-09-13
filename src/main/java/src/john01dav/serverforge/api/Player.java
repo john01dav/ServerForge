@@ -29,7 +29,7 @@ public class Player{
         Player c = playerEntities.get(player.getUniqueID());
         if(c == null){
             Player np = new Player(player);
-            playerEntitiHARDCOREes.put(player.getUniqueID(), np);
+            playerEntities.put(player.getUniqueID(), np);
             return np;
         }else{
             return c;

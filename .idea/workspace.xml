@@ -43,8 +43,8 @@
       <file leaf-file-name="Player.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6314655" vertical-offset="998" max-vertical-offset="1926">
-              <caret line="104" column="26" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.33297414" vertical-offset="105" max-vertical-offset="1926">
+              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -1751,8 +1751,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6314655" vertical-offset="998" max-vertical-offset="1926">
-          <caret line="104" column="26" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.33297414" vertical-offset="105" max-vertical-offset="1926">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
           <folding />
         </state>
       </provider>
