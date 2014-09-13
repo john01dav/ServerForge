@@ -102,10 +102,10 @@ public class Player{
     public void setGameMode(GameMode mode){
         EntityPlayerMP mpPlayer = ((EntityPlayerMP) entityPlayer);
         switch(mode){
-            case SURVIVAL;
+            case SURVIVAL:
                 mpPlayer.setGameType(WorldSettings.GameType.SURVIVAL);
             break;
-            case CREATIVE;
+            case CREATIVE:
                 mpPlayer.setGameType(WorldSettings.GameType.CREATIVE);
             break;
             case ADVENTURE:
