@@ -3,6 +3,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.world.WorldSettings;
 import src.john01dav.serverforge.ServerForge;
 
 import java.util.HashMap;
@@ -13,6 +14,12 @@ public class Player{
     private EntityPlayer entityPlayer;
     private InventoryBase inventory;
 
+    public enum GameMode{
+        SURVIVAL,
+        CREATIVE,
+        ADVENTURE
+    }
+
     private Player(EntityPlayer entityPlayer){
         this.entityPlayer = entityPlayer;
         inventory = new InventoryBase(this.entityPlayer.inventory);
@@ -22,7 +29,7 @@ public class Player{
         Player c = playerEntities.get(player.getUniqueID());
         if(c == null){
             Player np = new Player(player);
-            playerEntities.put(player.getUniqueID(), np);
+            playerEntitiHARDCOREes.put(player.getUniqueID(), np);
             return np;
         }else{
             return c;
@@ -86,6 +93,25 @@ public class Player{
 
     public InventoryBase getInventory(){
         return inventory;
+    }
+
+    /**
+     * Sets this player's current gamemode
+     * @param mode the new gamemode
+     */
+    public void setGameMode(GameMode mode){
+        EntityPlayerMP mpPlayer = ((EntityPlayerMP) entityPlayer);
+        switch(mode){
+            case SURVIVAL;
+                mpPlayer.setGameType(WorldSettings.GameType.SURVIVAL);
+            break;
+            case CREATIVE;
+                mpPlayer.setGameType(WorldSettings.GameType.CREATIVE);
+            break;
+            case ADVENTURE;
+                mpPlayer.setGameType(WorldSettings.GameType.ADVENTURE);
+            break;
+        }
     }
 
 }

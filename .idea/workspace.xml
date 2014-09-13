@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Player.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="548" max-vertical-offset="1476">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.82543105" vertical-offset="998" max-vertical-offset="1926">
+              <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -113,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InteractEvent.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="InteractEvent.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/InteractEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58189654" vertical-offset="0" max-vertical-offset="1638">
-              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1638">
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
               <folding>
                 <element signature="e#2899#2900#0" expanded="true" />
                 <element signature="e#2928#2929#0" expanded="true" />
@@ -737,8 +737,8 @@
         <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/events/EventPlayerTracker.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/BlockBreakEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/events/DefaultEventListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/InteractEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/Player.java" />
       </list>
     </option>
   </component>
@@ -1728,14 +1728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="548" max-vertical-offset="1476">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/events/DefaultEventListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.6" vertical-offset="162" max-vertical-offset="1368">
@@ -1748,12 +1740,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/InteractEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58189654" vertical-offset="0" max-vertical-offset="1638">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1638">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding>
             <element signature="e#2899#2900#0" expanded="true" />
             <element signature="e#2928#2929#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82543105" vertical-offset="998" max-vertical-offset="1926">
+          <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
