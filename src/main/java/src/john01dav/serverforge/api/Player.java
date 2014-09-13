@@ -1,6 +1,7 @@
 package src.john01dav.serverforge.api;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
 import src.john01dav.serverforge.ServerForge;
 
@@ -79,7 +80,7 @@ public class Player{
      * @param permission the permission to lookup
      * @return the value of the permission
      */
-    public boolean getPermission(String permission){
+    public boolean getPermission(String permission) {
         return ServerForge.instance.getPermissionsManager().getPermission(((EntityPlayerMP) entityPlayer), permission);
     }
 

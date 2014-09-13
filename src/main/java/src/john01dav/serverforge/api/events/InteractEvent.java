@@ -11,11 +11,28 @@ public class InteractEvent implements CancellableEvent{
     public static final int SIDE2_FACE = 3;
     public static final int SIDE3_FACE = 4;
     public static final int SIDE4_FACE = 5;
+    public static final int RIGHT_CLICK_BLOCK = 6;
+    public static final int RIGHT_CLICK_AIR = 6;
+    public static final int LEFT_CLICK_BLOCK = 6;
     private PlayerInteractEvent playerInteractEvent;
+    private int action;
     private boolean cancelled = false;
 
     public InteractEvent(PlayerInteractEvent playerInteractEvent){
         this.playerInteractEvent = playerInteractEvent;
+
+        switch(playerInteractEvent.action){
+            case RIGHT_CLICK_BLOCK:
+                action = RIGHT_CLICK_BLOCK;
+            break;
+            case RIGHT_CLICK_AIR:
+                action = RIGHT_CLICK_AIR;
+            break;
+            case LEFT_CLICK_BLOCK:
+                action = LEFT_CLICK_BLOCK;
+            break;
+        }
+
         setCancelled(playerInteractEvent.isCanceled());
     }
 
@@ -69,6 +86,14 @@ public class InteractEvent implements CancellableEvent{
         }else{
             return true;
         }
+    }
+
+    /**
+     * Returns the action that was done to trigger this event, see the integer constants on this class for more details
+     * @return the action that was done to trigger this event
+     */
+    public int getAction(){
+        return action;
     }
 
 }
