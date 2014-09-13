@@ -108,7 +108,7 @@ public class Player{
             case CREATIVE;
                 mpPlayer.setGameType(WorldSettings.GameType.CREATIVE);
             break;
-            case ADVENTURE;
+            case ADVENTURE:
                 mpPlayer.setGameType(WorldSettings.GameType.ADVENTURE);
             break;
         }
