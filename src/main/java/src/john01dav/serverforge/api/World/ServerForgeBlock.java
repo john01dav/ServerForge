@@ -7,6 +7,9 @@ public class ServerForgeBlock {
     protected Block block;
 
     public static ServerForgeBlock get(Block block){
+        if(block == null)
+            return null;
+
         String name = block.getUnlocalizedName();
         ServerForgeBlock oldBlock = blockIndex.get(name);
         if(oldBlock == null){

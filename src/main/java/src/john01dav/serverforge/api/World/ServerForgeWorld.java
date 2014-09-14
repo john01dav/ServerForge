@@ -7,6 +7,11 @@ public class ServerForgeWorld{
     private static ConcurrentHashMap<Integer, ServerForgeWorld> worldIndex = new ConcurrentHashMap<Integer, ServerForgeWorld>();
     private World world;
 
+    /**
+     * Returns the world for the specified dimension ID
+     * @param dimId the dimension ID to query
+     * @return the queried world
+     */
     public static ServerForgeWorld get(int dimId){
         ServerForgeWorld serverForgeWorld = worldIndex.get(dimId);
 

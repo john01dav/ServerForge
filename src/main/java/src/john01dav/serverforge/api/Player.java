@@ -123,4 +123,28 @@ public class Player{
         return ServerForgeWorld.get(entityPlayer.dimension);
     }
 
+    /**
+     * Returns the current X coordinate of this player
+     * @return The current X coordinate of this player
+     */
+    public double getX(){
+        return entityPlayer.getPlayerCoordinates().posX;
+    }
+
+    /**
+     * Returns the current Y coordinate of this player
+     * @return The current Y coordinate of this player
+     */
+    public double getY(){
+        return entityPlayer.getPlayerCoordinates().posY;
+    }
+
+    /**
+     * Returns the current Z coordinate of this player
+     * @return The current Z coordinate of this player
+     */
+    public double getZ(){
+        return entityPlayer.getPlayerCoordinates().posZ;
+    }
+
 }
