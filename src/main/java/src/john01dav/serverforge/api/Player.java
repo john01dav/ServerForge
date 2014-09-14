@@ -5,6 +5,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.WorldSettings;
 import src.john01dav.serverforge.ServerForge;
+import src.john01dav.serverforge.api.World.ServerForgeWorld;
 
 import java.util.HashMap;
 import java.util.UUID;
@@ -112,6 +113,14 @@ public class Player{
                 mpPlayer.setGameType(WorldSettings.GameType.ADVENTURE);
             break;
         }
+    }
+
+    /**
+     * Returns this player's current world
+     * @return This player's current world
+     */
+    public ServerForgeWorld getWorld(){
+        return ServerForgeWorld.get(entityPlayer.dimension);
     }
 
 }
