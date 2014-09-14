@@ -88,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PluginLoader.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PluginLoader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/loader/PluginLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3737705" vertical-offset="360" max-vertical-offset="2142">
-              <caret line="47" column="102" selection-start-line="47" selection-start-column="102" selection-end-line="47" selection-end-column="102" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
+              <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -111,19 +111,25 @@
       <file leaf-file-name="InteractEvent.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/InteractEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1890">
-              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="1782">
+              <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="107" selection-end-column="5" />
+              <folding>
+                <element signature="e#3217#3218#0" expanded="true" />
+                <element signature="e#3246#3247#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlockBreakEvent.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BlockBreakEvent.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/BlockBreakEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="954">
-              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-              <folding />
+            <state vertical-scroll-proportion="0.19396552" vertical-offset="0" max-vertical-offset="936">
+              <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+              <folding>
+                <element signature="e#1242#1243#0" expanded="true" />
+                <element signature="e#1271#1272#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -713,12 +719,12 @@
         <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/InventoryStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/InventoryBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/events/EventPlayerTracker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/BlockBreakEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/events/DefaultEventListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/InteractEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/ServerForge.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/loader/PluginLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/InteractEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/BlockBreakEvent.java" />
       </list>
     </option>
   </component>
@@ -1654,26 +1660,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/BlockBreakEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="954">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/events/DefaultEventListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1368">
           <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/InteractEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1638">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1704,9 +1694,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/loader/PluginLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3737705" vertical-offset="360" max-vertical-offset="2142">
-          <caret line="47" column="102" selection-start-line="47" selection-start-column="102" selection-end-line="47" selection-end-column="102" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/InteractEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="1782">
+          <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="107" selection-end-column="5" />
+          <folding>
+            <element signature="e#3217#3218#0" expanded="true" />
+            <element signature="e#3246#3247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/john01dav/serverforge/api/events/BlockBreakEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19396552" vertical-offset="0" max-vertical-offset="936">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding>
+            <element signature="e#1242#1243#0" expanded="true" />
+            <element signature="e#1271#1272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

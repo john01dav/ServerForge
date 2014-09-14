@@ -1,6 +1,7 @@
 package src.john01dav.serverforge.api.events;
 import cpw.mods.fml.common.eventhandler.Event;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import src.john01dav.serverforge.api.Player;
 import src.john01dav.serverforge.events.CancellableEvent;
 
 public class InteractEvent implements CancellableEvent{
@@ -15,6 +16,7 @@ public class InteractEvent implements CancellableEvent{
     public static final int RIGHT_CLICK_AIR = 6;
     public static final int LEFT_CLICK_BLOCK = 6;
     private PlayerInteractEvent playerInteractEvent;
+    private Player player;
     private int action;
     private boolean cancelled = false;
 
@@ -33,6 +35,7 @@ public class InteractEvent implements CancellableEvent{
             break;
         }
 
+        player = Player.get(playerInteractEvent.entityPlayer);
         setCancelled(playerInteractEvent.isCanceled());
     }
 
@@ -94,6 +97,14 @@ public class InteractEvent implements CancellableEvent{
      */
     public int getAction(){
         return action;
+    }
+
+    /**
+     * Returns the player associated with this event
+     * @return The player associated with this event
+     */
+    public Player getPlayer(){
+        return player;
     }
 
 }
