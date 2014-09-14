@@ -1,9 +1,11 @@
 package src.john01dav.serverforge.loader;
+import com.google.common.io.Files;
 import src.john01dav.serverforge.ServerForge;
 import src.john01dav.serverforge.api.ServerForgePlugin;
 import src.john01dav.serverforge.plugin.ServerForgeDefaultPlugin;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.*;
 import java.util.ArrayList;
 
@@ -16,12 +18,18 @@ public class PluginLoader{
     public void onServerStart(){
         pluginsFolder = new File("./plugins");
 
-        if(!pluginsFolder.isDirectory()){
-            pluginsFolder.delete();
-        }
+        try {
+            if (!pluginsFolder.isDirectory()) {
+                Files.move(pluginsFolder, new File("./plugins-file"));
+                pluginsFolder.delete();
+            }
 
-        if(!pluginsFolder.exists()){
-            pluginsFolder.mkdir();
+            if (!pluginsFolder.exists()) {
+                pluginsFolder.mkdir();
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+            System.exit(0);
         }
 
         pluginFile = new ArrayList<PluginFile>();
@@ -33,9 +41,16 @@ public class PluginLoader{
             ServerForge.info("Loading " + file.getAbsolutePath());
             if(file.getName().endsWith(".jar") || (!file.isDirectory())){
                 PluginFile pFile = new PluginFile(file);
-                pluginFile.add(pFile);
-                pluginURL.add(pFile.getURL());
-                ServerForge.info("Loaded " + pFile.getName());
+
+                if(pFile.getName() == null) {
+                    ServerForge.error("Plugin " + file.getAbsolutePath() + " does not have a name set, please add the name to plugindata.txt");
+                }else if(pFile.getMainClass() == null){
+                    ServerForge.error("Plugin " + file.getAbsolutePath() + " does not have a mainClass set, please add the name to plugindata.txt");
+                }else{
+                    pluginFile.add(pFile);
+                    pluginURL.add(pFile.getURL());
+                    ServerForge.info("Loaded " + pFile.getName());
+                }
             }else{
                 ServerForge.info("Skipping " + file.getAbsolutePath() + " not a plugin.");
             }
@@ -60,6 +75,9 @@ public class PluginLoader{
             }catch(ClassCastException e){
                 ServerForge.error("Failed to load plugin " + pFile.getName() + ". Can not instantiate main class is not instanceof " + ServerForgePlugin.class.getCanonicalName() + ".");
                 e.printStackTrace();
+            }catch(NullPointerException e){
+                ServerForge.error("Failed to load plugin " + pFile.getName() + ". Could not load main class " + ServerForgePlugin.class.getCanonicalName() + ". (nullpointerexception)");
+                e.printStackTrace();
             }
         }
 
@@ -74,9 +92,15 @@ public class PluginLoader{
         ServerForge.info("ServerForgePlugin started");
     }
 
-    private void startPlugin(PluginFile pFile, ClassLoader loader) throws ClassNotFoundException, InstantiationException, IllegalAccessException, ClassCastException{
+    private void startPlugin(PluginFile pFile, ClassLoader loader) throws ClassNotFoundException, InstantiationException, IllegalAccessException, ClassCastException, NullPointerException{
         ServerForge.info("Starting " + pFile.getName());
-        Class<?> pluginClass = loader.loadClass(pFile.getMainClass());
+        String mainClass = pFile.getMainClass();
+
+        if(loader == null){
+            System.out.println("Classloader null?!");
+        }
+
+        Class<?> pluginClass = loader.loadClass(mainClass);
         Object instance = pluginClass.newInstance();
         ServerForgePlugin plugin = ((ServerForgePlugin) instance);
         PluginWrapper wrapper = new PluginWrapper(plugin, pFile.getName());
